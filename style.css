@@ -10,6 +10,16 @@
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+.main.pc {
+  position: absolute !important;
+  left: 24% !important;
+  top: 0 !important;
+  width: 75% !important;
+  padding-top: 5% !important;
+  font-size: 2vw !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
 body {
   width: 100%;
   background-color: #ADE8F4;
@@ -37,6 +47,22 @@ body {
   width: 100%;
   padding: 5%;
   padding-top: 14%;
+}
+
+.sidebar.pc {
+  position: fixed !important;
+  top: 0 !important;
+  height: 100% !important;
+  transition: width, 0.5s linear !important;
+  background-color: #007FE0 !important;
+  color: #FFFFFF !important;
+  z-index: -1 !important;
+  font-size: 5vw !important;
+  z-index: 4 !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 20% !important;
+  padding: 1% !important;
 }
 
 .menu-button {
@@ -95,6 +121,23 @@ input {
 
 .sidebar.open input {
   width: 89vw;
+}
+
+.sidebar input.pc {
+  border: none !important;
+  font-size: 30% !important;
+  background: #00B4D8 !important;
+  color: #FFFFFF !important;
+  height: 5vw !important;
+  transition: width, 0.2s linear !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.sidebar input.pc:hover {
+  height: 5vw !important;
+  font-size: 35% !important;
+  background: #00accf !important;
 }
 
 .hidden-item {
