@@ -91,18 +91,6 @@
         </p>
         <br><br>
       </div>
-      <div id="friends" hidden>
-        <br><br>
-        <h2>Friends</h2>
-        <p>Here are some friends of mine:
-          <div class="card">
-            <p><b>Concrete.DZN</b></p>
-            <p>Panzoid Artist / Gaming Youtuber / Intro and Outro Maker</p>
-            <p>His Website: https://sites.google.com/view/concrete-dzn</p>
-          </div>
-        </p>
-        <br><br><br><br><br><br><br>
-      </div>
     </div>
     <script>
       function getAge(dateString) {
@@ -115,10 +103,20 @@
         }
         return age;
       }
+      var elems = [];
       window.onload = function() {
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   	    if (!isMobile) {
-    		  window.location.href = "/pc.html"
+    		  document.getElementById("menu-button").hidden = "true";
+          var elems = document.body.children;
+          for(var i=0; i<elems.length;i++){
+            elems[i].classList.add("pc")
+            if (elems[i].children){
+              for(var ii=0; ii<elems[i].children.length;ii++){
+                elems[i].children[ii].classList.add("pc")
+              }
+            }
+          }
   		  }
         document.getElementById("age").innerHTML = getAge("2009/11/22")
       }
