@@ -100,7 +100,7 @@ button {
   padding: 2%;
 }
 
-input {
+input["type"="button"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -117,6 +117,7 @@ input {
   left: 1vw;
   width: 0;
   transition: width, 0.5s linear;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .sidebar.open input {
@@ -140,6 +141,23 @@ input {
   background: #00accf !important;
 }
 
+.main.pc div button {
+  border: none !important;
+  font-size: 70% !important;
+  background: #00B4D8 !important;
+  color: #FFFFFF !important;
+  transition: width, 0.2s linear !important;
+  width: 30% !important;
+  text-align: center !important;
+}
+
+.main.pc div button:hover {
+  font-size: 75% !important;
+  background: #00accf !important;
+}
+
+
+
 .hidden-item {
   border-color: #000000;
   font-size: 5vw;
@@ -153,4 +171,45 @@ input {
 
 .hidden-item.shown {
   display: block;
+}
+
+.pc .hidden-item {
+  border-color: #000000;
+  font-size: 70% !important;
+  padding: 2%;
+  background: #00B4D8;
+  color: #FFFFFF;
+  border-width: 1vw;
+  transition: display;
+  display: none;
+}
+
+.pc .hidden-item.shown {
+  display: block;
+}
+
+
+
+select {
+  background-color:#1F99CD;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A@{arrow}%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E%0A");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: auto 50%;
+  border-radius:2px;
+  border:none;
+  color: #ffffff;
+  padding: 10px 30px 10px 10px;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  &::-ms-expand { display: none };
+}
+
+@-moz-document url-prefix() {
+  select {
+    color: rgba(0,0,0,0);
+    text-shadow: 0 0 0 #ffffff;
+  }
 }
