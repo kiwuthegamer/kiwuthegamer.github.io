@@ -113,7 +113,7 @@ input["type"="button"] {
   color: #FFFFFF;
   width: 0vw;
   height: 9vw;
-  margin-bottom: 2%;
+  margin-bottom: -4%;
   left: 1vw;
   width: 0;
   transition: width, 0.5s linear;
