@@ -21,7 +21,7 @@
       <div id="home">
         <h1>Welcome to Kiwuthegamer!</h1>
         <br><br>
-        <p>Hi! I'm Kevin George AKA Kiwuthegamer! I am currently <span id="age">--</span> years old. This website is about my interests and specialities! Keep scrolling to read about me!</p>
+        <p>Hi! I'm Kevin George AKA Kiwuthegamer! I am currently <span id="age">--</span> years old. This website is about my interests and specialities! Keep scrolling to find out how I can help you with all these things for cheap!</p>
       </div>
       <div id="coder">
         <br><br>
@@ -34,14 +34,18 @@
           <li>Python</li>
           <li>Scratch</li>
           <li>AHK(AutoHotKey)</li>
-        </ul><br>
-        <!--<button onclick="$('#item1').toggleClass('shown')">Click here to see some of the websites I've programmed!</button>
+        </ul>
+        <p>I also make bookmarklets (<a href="https://en.wikipedia.org/wiki/Bookmarklet">What's a Bookmarklet?</a>) using JS</p><br>
+        
+        <button hidden onclick="$('#item1').toggleClass('shown')">Click here to see some of the websites I've programmed!</button>
         <div class="hidden-item" id="item1">
           <ul>
-            <li><a href="https://ascii-games.kevingeorge.repl.co/">ASCII Games</a></li>
-            <li><a href="https://clean-pond.kevingeorge.repl.co/">Clean Pond</a></li>
+            <li></li>
           </ul>
-        </div>-->
+        </div>
+
+        <a href="#pricing">I want that!</a>
+        
       </div>
       <div id="graphic">
         <br><br>
@@ -55,71 +59,92 @@
           <li>PDF</li>
           <li>And more!</li>
         </ul>
-        <!--
-        <button onclick="$('#item2').toggleClass('shown')">Click here to see some of the designs I've made!</button>
+        
+        <button hidden onclick="$('#item2').toggleClass('shown')">Click here to see some of the designs I've made!</button>
         <div class="hidden-item" id="item2">
-          <img src="Images/Graphic/img1.png">
+          <ul>
+            <li></li>
+          </ul>
         </div>
-        -->
+        
+        <a href="#pricing">I want that!</a>
+        
       </div>
       <div id="editor">
         <br><br>
         <h2>I'm a Video and Photo Editor!</h2>
         <p>I edit photos to create impossible looking stunts, to beautify a scene, or to just add ambience. I edit videos to make magic videos, to add subtitles, and so much more! <br><br></p>
-        <!--<button onclick="$('#item3').toggleClass('shown')">Click here to see some of the photos and videos I've edited!</button>
+        
+        <button hidden onclick="$('#item3').toggleClass('shown')">Click here to see some of the photos and videos I've edited!</button>
         <div class="hidden-item" id="item3">
-          aaa
-        </div>-->
+          <ul>
+            <li></li>
+          </ul>
+        </div>
+
+        <a href="#pricing">I want that!</a>
+        
       </div>
       <div id="minecraft">
         <br><br>
         <h2>I'm a Minecrafter!</h2>
         <p>I play a sandbox game by Mojang Studios called <a href="https://minecraft.fandom.com/wiki/Minecraft_Wiki">Minecraft</a>. I also use commands, make resource packs, create skins, and code datapacks. <br><br></p>
-        <!--<button onclick="$('#item4').toggleClass('shown')">Click here to see some of the things I've made!</button>
+        
+        <button hidden onclick="$('#item4').toggleClass('shown')">Click here to see some of the things I've made!</button>
         <div class="hidden-item" id="item4">
-          aaa
-        </div>-->
+          <ul>
+            <li></li>
+          </ul>
+        </div>
+
+        <a href="#pricing">I want that!</a>
+        
       </div>
       <div id="contact">
         <br><br>
         <h2>Contact</h2>
-        <p>Do you need help with any of these? Don't worry! I'll do it for you for completely free! Just contact me at
-          <ul>
-            <li>Discord(Prefered): kiwuthegamer#8326</li>
-            <li>Email: kiwuthegamer@gmail.com</li>
-          </ul>
-        </p>
+        <ul>
+          <li>Discord(Prefered): kiwuthegamer#8326</li>
+          <li>Email: kiwuthegamer@gmail.com</li>
+        </ul>
         <br><br>
       </div>
+
+      <div id="pricing">
+        <br><br>
+        <h2>Pricing</h2>
+        <select id="pricingChoice1" style="margin-left: 20%">
+          <option value="">Choose an Option</option>
+          <optgroup label="Coding">
+            <option value="cW">Code A Website</option>
+            <option value="cB">Code A Bookmarklet</option>
+            <option value="cE">Anything else</option>
+          </optgroup>
+          <optgroup label="Graphic Design">
+            <option value="gdP">Poster</option>
+            <option value="gdI">Icon/Logo</option>
+            <option value="gdT">Thumbnail</option>
+            <option value="gdE">Anything else</option>
+          </optgroup>
+          <optgroup label="Video/Photo Editing">
+            <option value="vpV">Video Editing</option>
+            <option value="vpP">Photo Editing</option>
+          </optgroup>
+          <optgroup label="Minecraft">
+            <option value="mcA">Assistance</option>
+            <option value="mcC">Commands</option>
+            <option value="mcRD">Resource Packs</option>
+            <option value="mcRD">Data Packs</option>
+            <option value="mcS">Skins</option>
+          </optgroup>
+        </select>
+        <br>
+        <select id="pricingChoice2" style="margin-left: 20%" hidden></select>
+        <br><br>
+        <p id="pricingPrice"></p>
+        <br><br><br><br>
+      </div>
     </div>
-    <script>
-      function getAge(dateString) {
-        var today = new Date();
-        var birthDate = new Date(dateString);
-        var age = today.getFullYear() - birthDate.getFullYear();
-        var m = today.getMonth() - birthDate.getMonth();
-        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-          age--;
-        }
-        return age;
-      }
-      var elems = [];
-      window.onload = function() {
-        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  	    if (!isMobile) {
-    		  document.getElementById("menu-button").hidden = "true";
-          var elems = document.body.children;
-          for(var i=0; i<elems.length;i++){
-            elems[i].classList.add("pc")
-            if (elems[i].children){
-              for(var ii=0; ii<elems[i].children.length;ii++){
-                elems[i].children[ii].classList.add("pc")
-              }
-            }
-          }
-  		  }
-        document.getElementById("age").innerHTML = getAge("2009/11/22")
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
