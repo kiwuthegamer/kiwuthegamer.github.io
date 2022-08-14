@@ -205,6 +205,7 @@ select {
   -webkit-appearance: none;
   appearance: none;
   &::-ms-expand { display: none };
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 @-moz-document url-prefix() {
@@ -212,4 +213,14 @@ select {
     color: rgba(0,0,0,0);
     text-shadow: 0 0 0 #ffffff;
   }
+}
+
+#discountWrapper {
+  height:5vh;
+  background-color: #ec3c3c;
+  color: #FFFFFF;
+  padding: 1%;
+  text-align: center;
+  margin: 1%;
+  font-family: 'Roboto Condensed', sans-serif;
 }
