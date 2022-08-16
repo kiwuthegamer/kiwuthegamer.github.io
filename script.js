@@ -99,7 +99,7 @@ offers = {
     name: "First Month Discount",
     discount: "30% off",
     discountValue: 0.7,
-    endDate: "Sep 30, 2022 00:00:00"
+    endDate: "Sep 18, 2022 00:00:00"
   }
 }
 
