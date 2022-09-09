@@ -113,7 +113,7 @@ var pricingPrice = document.getElementById("pricingPrice");
 var discount = document.getElementById("discount");
 
 if(Object.keys(offers).length == 0){
-  discount.hidden = "true";
+  document.getElementById("discountWrapper").hidden = "true";
 }
 
 for(var i=0;i<Object.keys(offers).length;i++){
