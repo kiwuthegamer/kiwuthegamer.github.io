@@ -105,12 +105,16 @@ var pricing = {
 }
 
 offers = {}
-
+  
 var pricingChoice1 = document.getElementById("pricingChoice1");
 var pricingChoice2 = document.getElementById("pricingChoice2");
 var pricingPrice = document.getElementById("pricingPrice");
 
 var discount = document.getElementById("discount");
+
+if(Object.keys(offers).length == 0){
+  discount.hidden = "true";
+}
 
 for(var i=0;i<Object.keys(offers).length;i++){
   var offer = offers[Object.keys(offers)[i]];
