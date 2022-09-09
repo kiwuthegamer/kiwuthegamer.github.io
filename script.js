@@ -51,6 +51,16 @@ var pricing = {
     prices: ["70","85","100","120","150","200"],
     unit: " Characters"
   },
+  "cG": {
+    options: ["0 - 200","200 - 350","350 - 500","500 - 750","750 - 1000","1000+"],
+    prices: ["90","100","120","150","200","250"],
+    unit: " Characters"
+  },
+  "cS": {
+    options: ["0 - 200","200 - 350","350 - 500","500 - 750","750 - 1000","1000+"],
+    prices: ["100","200","250","300","350","500"],
+    unit: " Blocks"
+  },
   "cE": {
     price: "120"
   },
@@ -94,14 +104,7 @@ var pricing = {
   }
 }
 
-offers = {
-  firstMonth: {
-    name: "First Month Discount",
-    discount: "30% off",
-    discountValue: 0.7,
-    endDate: "Sep 18, 2022 00:00:00"
-  }
-}
+offers = {}
 
 var pricingChoice1 = document.getElementById("pricingChoice1");
 var pricingChoice2 = document.getElementById("pricingChoice2");
