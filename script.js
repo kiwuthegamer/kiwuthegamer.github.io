@@ -1,14 +1,3 @@
-function getAge(dateString) {
-  var today = new Date();
-  var birthDate = new Date(dateString);
-  var age = today.getFullYear() - birthDate.getFullYear();
-  var m = today.getMonth() - birthDate.getMonth();
-  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-    age--;
-  }
-  return age;
-}
-
 var offers;
 var elems = [];
 var isMobile;
@@ -37,9 +26,9 @@ window.onload = function() {
       }
     }
   }
-  document.getElementById("age").innerHTML = getAge("2009/11/22")
 
 // Pricing
+  
 var pricing = {
   "cW": {
     options: ["0 - 200","200 - 400","400 - 600","600 - 800","800 - 1000","1000+"],
@@ -151,6 +140,7 @@ pricingChoice2.onchange = function() {
   pricingPrice.innerHTML = "Price: "+calculatePrice(this.value);
 }
 
+//Discounts
 var countDownDate = new Date(offers[Object.keys(offers)[0]].endDate.toString()).getTime();
   
 var x = setInterval(function() {
