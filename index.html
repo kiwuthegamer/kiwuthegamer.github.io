@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu');
+
+    :root {
+      --main-color: #e0e0e0;
+      --font-color: #333;
+      --main-shadow: 6px 6px 15px #bebebe, -6px -6px 15px #ffffff;
+      --inset-shadow: inset 6px 6px 15px #bebebe, inset -6px -6px 15px #ffffff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --main-color: #333;
+        --font-color: #e0e0e0;
+        --main-shadow: 6px 6px 15px #303030, -6px -6px 15px #404040;
+        --inset-shadow: inset 6px 6px 15px #303030, inset -6px -6px 15px #404040;
+      }
+    }
+
+    body {
+      background: var(--main-color);
+      color: var(--font-color);
+      margin: 2.5rem;
+      font-family: Ubuntu, sans-serif;
+      user-select: none;
+      width: calc(100% - 5rem);
+      height: calc(100% - 5rem);
+      text-align: center;
+    }
+    
+    .card {
+      border-radius: 10px;
+      background: var(--main-color);
+      box-shadow: var(--main-shadow);
+      display: table;
+      width: 17rem;
+      height: 2rem;
+      margin: 1rem;
+      transition: 0.3s ease-out;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.4rem;
+      color: var(--font-color);
+      padding: 1.5rem;
+    }
+
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card:hover {
+      scale: 1.1;
+    }
+
+    .card:active {
+      box-shadow: var(--inset-shadow);
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+      color: var(--font-color);
+    }
+  </style>
+  <title>Kiwuthegamer Homepage</title>
+</head>
+<body>
+  <div class="card-container">
+    <h1>Kiwuthegamer</h1>
+    <div class="card">Useful Cards</div>
+    <div class="card">Useful Cards</div>
+    <div class="card">Useful Cards</div>
+  </div>
+  <footer>
+    <div class="card-text" style="white-space: pre-line;">
+      <br>
+      ©️2023 Kevin George (kiwuthegamer)
+    </div>
+  </footer>
+</body>
+</html>
