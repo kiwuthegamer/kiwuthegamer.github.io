@@ -4,8 +4,24 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Ubuntu');
 
+    :root {
+      --main-color: #e0e0e0;
+      --font-color: #333;
+      --main-shadow: 6px 6px 15px #bebebe, -6px -6px 15px #ffffff;
+      --inset-shadow: inset 6px 6px 15px #bebebe, inset -6px -6px 15px #ffffff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --main-color: #333;
+        --font-color: #e0e0e0;
+        --main-shadow: 6px 6px 15px #303030, -6px -6px 15px #404040;
+        --inset-shadow: inset 6px 6px 15px #303030, inset -6px -6px 15px #404040;
+      }
+    }
+    
     body {
-      background: #e0e0e0;
+      background: var(--main-color);
       margin: 2.5rem;
       margin-top: 0rem;
       font-family: Ubuntu, sans-serif;
@@ -14,8 +30,8 @@
     
     .card {
       border-radius: 10px;
-      background: #e0e0e0;
-      box-shadow: 6px 6px 15px #bebebe, -6px -6px 15px #ffffff;
+      background: var(--main-color);
+      box-shadow: var(--main-shadow);
       display: inline-flex;
       width: 17rem;
       height: 11rem;
@@ -29,7 +45,7 @@
     }
 
     .card:active {
-      box-shadow: inset 6px 6px 15px #bebebe, inset -6px -6px 15px #ffffff;
+      box-shadow: var(--inset-shadow);
     }
 
     .card-container {
@@ -48,12 +64,12 @@
       font-weight: bold;
       font-size: 1.4rem;
       margin-bottom: 0.5rem;
-      color: #222;
+      color: var(--font-color);
     }
 
     .card-text {
       font-size: 0.9rem;
-      color: #333;
+      color: var(--font-color);
     }
   </style>
   <title>Useful Cards</title>
