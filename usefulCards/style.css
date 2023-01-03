@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu');
+
+:root {
+  --main-color: #e0e0e0;
+  --font-color: #333;
+  --main-shadow: 6px 6px 15px #bebebe, -6px -6px 15px #ffffff;
+  --inset-shadow: inset 6px 6px 15px #bebebe, inset -6px -6px 15px #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-color: #333;
+    --font-color: #e0e0e0;
+    --main-shadow: 6px 6px 15px #303030, -6px -6px 15px #404040;
+    --inset-shadow: inset 6px 6px 15px #303030, inset -6px -6px 15px #404040;
+  }
+}
+
+body {
+  background: var(--main-color);
+  color: var(--font-color);
+  margin: 2.5rem;
+  margin-top: 0rem;
+  font-family: Ubuntu, sans-serif;
+  user-select: none;
+}
+
+.card {
+  border-radius: 10px;
+  background: var(--main-color);
+  box-shadow: var(--main-shadow);
+  display: inline-flex;
+  width: 17rem;
+  height: 11rem;
+  margin: 1rem;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  scale: 1.1;
+}
+
+.card:active {
+  box-shadow: var(--inset-shadow);
+}
+
+.card-container {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.card-text-container {
+  height: calc(100% - 3rem);
+  width: calc(100% - 3rem);
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--font-color);
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: var(--font-color);
+}
