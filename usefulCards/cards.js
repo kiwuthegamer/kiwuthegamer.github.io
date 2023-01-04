@@ -46,6 +46,41 @@ const cards = [
   },
   {
     "type": "sectionheader",
+    "title": "Free Resources",
+    "content": "Free resources like videos, images, and more!"
+  },
+  {
+    "title": "Unsplash",
+    "content": "The internet’s source for visuals. Powered by creators everywhere",
+    "url": "https://unsplash.com/"
+  },
+  {
+    "title": "MixKit",
+    "content": "Free assets for your next video project. Stock Video Clips, Stock Music, Sound Effects & Video Templates. All available for free!",
+    "url": "https://mixkit.co/"
+  },
+  {
+    "type": "sectionheader",
+    "title": "URL Shorteners",
+    "content": "Shorten any URL!"
+  },
+  {
+    "title": "Bit.ly",
+    "content": "Shorten URLs. Generate QR Codes. And now, create Link-in-bios.",
+    "url": "https://bitly.com/"
+  },
+  {
+    "title": "Free URL Shortener",
+    "content": "RB.GY is a free tool to shorten URLs. Create short & memorable links in seconds",
+    "url": "rb.gy"
+  },
+  {
+    "title": "Grabify IP logger",
+    "content": "Grabify IP logger will help you find and track the IP address of any person.",
+    "url": "https://grabify.link/"
+  },
+  {
+    "type": "sectionheader",
     "title": "File Editors",
     "content": "Editors for all kinds of files"
   },
