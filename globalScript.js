@@ -5,3 +5,6 @@ document.write(`<footer>
   Copyright &copy; <script>document.write(new Date().getFullYear())</script> Kevin George (kiwuthegamer) All Rights Reserved<br>
 </div>
 </footer>`)
+
+// Favicon
+document.head.innerHTML += "<link rel='shortcut icon' href='Assets/Logo/Square.png' type='image/x-icon'>"
