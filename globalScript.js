@@ -7,4 +7,5 @@ document.write(`<footer>
 </footer>`)
 
 // Favicon
-document.head.innerHTML += "<link rel='shortcut icon' href='Assets/Logo/Square.png' type='image/x-icon'>"
+document.head.innerHTML += '<link rel="icon" type="image/x-icon" href="Assets/Logo/Square.png">'
+
