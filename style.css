@@ -7,3 +7,24 @@
   font-family: inherit;
 	outline: inherit;
 }
+
+@keyframes rgb {
+  33% {
+    filter: hue-rotate(130deg); /* Blue */
+  }
+  66% {
+    filter: hue-rotate(200deg); /* Green */
+  }
+  100% {
+    filter: hue-rotate(0deg); /* Red */
+  }
+}
+
+h1 img {
+  width: 100%;
+  background-color: #000;
+  box-shadow: #000 0 0 1.5rem 1.5rem;
+  padding: 0.3rem;
+  border-radius: 20px;
+  animation: rgb 5s infinite alternate;
+}
