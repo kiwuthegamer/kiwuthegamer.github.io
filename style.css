@@ -9,14 +9,11 @@
 }
 
 @keyframes rgb {
-  33% {
-    filter: hue-rotate(130deg); /* Blue */
-  }
-  66% {
-    filter: hue-rotate(200deg); /* Green */
+  0% {
+    filter: hue-rotate(0deg);
   }
   100% {
-    filter: hue-rotate(0deg); /* Red */
+    filter: hue-rotate(360deg);
   }
 }
 
