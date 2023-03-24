@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu');
 
 :root {
-  --main-color: #e0e0e0;
+  --main-color: #eee;
   --font-color: #333;
+  --ghost-font-color: #666;
   --main-shadow: 6px 6px 15px #bebebe, -6px -6px 15px #ffffff;
   --inset-shadow: inset 6px 6px 15px #bebebe, inset -6px -6px 15px #ffffff;
 }
@@ -10,7 +11,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --main-color: #333;
-    --font-color: #e0e0e0;
+    --font-color: #eee;
+    --ghost-font-color: #aaa;
     --main-shadow: 6px 6px 15px #303030, -6px -6px 15px #404040;
     --inset-shadow: inset 6px 6px 15px #303030, inset -6px -6px 15px #404040;
   }
