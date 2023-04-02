@@ -22,7 +22,7 @@ body {
   background: var(--main-color);
   color: var(--font-color);
   margin: 2.5rem;
-  font-family: Ubuntu, sans-serif;
+  font-family: Ubuntu, system-ui, sans-serif;
   user-select: none;
   width: calc(100% - 5rem);
   height: calc(100% - 5rem);

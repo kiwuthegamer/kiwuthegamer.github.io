@@ -66,7 +66,7 @@ input[name="filter"]::after {
   content: attr(value);
   color: var(--ghost-font-color);
   font-size: 1.25em;
-  font-family: Ubuntu, sans-serif;
+  font-family: Ubuntu, system-ui, sans-serif;
   transition: color 250ms;
 }
 
@@ -74,5 +74,5 @@ input[name="filter"]:checked::after {
   content: attr(value);
   color: var(--font-color);
   font-size: 1.25em;
-  font-family: Ubuntu, sans-serif;
+  font-family: Ubuntu, system-ui, sans-serif;
 }
