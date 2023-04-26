@@ -40,6 +40,10 @@ body {
   cursor: pointer;
 }
 
+.card:focus {
+  scale: 1.1;
+}
+
 .card:hover {
   scale: 1.1;
 }
@@ -64,4 +68,17 @@ body {
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
   color: var(--font-color);
+}
+
+.home-link {
+  width: 30rem;
+  position: fixed;
+  left: 1rem;
+  z-index: 10;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.home-link:hover {
+  opacity: 1;
 }
