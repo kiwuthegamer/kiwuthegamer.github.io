@@ -20,6 +20,5 @@
 h1 img {
   width: 100%;
   padding: 0.3rem;
-  border-radius: 20px;
   animation: rgb 5s infinite alternate;
 }
