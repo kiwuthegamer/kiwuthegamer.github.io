@@ -38,6 +38,7 @@ body {
   margin: 1rem;
   transition: 0.3s ease-out;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .card:focus {
