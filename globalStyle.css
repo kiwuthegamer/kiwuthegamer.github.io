@@ -29,16 +29,28 @@ body {
   text-align: center;
 }
 
+a.card {
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding: 1.5rem;
+	border: none;
+  font-family: inherit;
+	outline: inherit;
+  height: auto;
+}
+
 .card {
   border-radius: 10px;
   background: var(--main-color);
   box-shadow: var(--main-shadow);
+  color: var(--font-color);
   display: inline-flex;
   width: 17rem;
   margin: 1rem;
   transition: 0.3s ease-out;
   cursor: pointer;
   text-decoration: none;
+  height: 11rem;
 }
 
 .card:focus {
@@ -108,4 +120,10 @@ body {
 
 .search-bar:active,.search-bar:focus {
   border: 1px solid var(--font-color);
+}
+
+h1.title > img {
+  width: 100%;
+  padding: 0.3rem;
+  animation: rgb 5s infinite alternate;
 }
