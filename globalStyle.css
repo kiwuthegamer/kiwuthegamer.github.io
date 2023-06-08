@@ -1,21 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu');
 
 :root {
-  --main-color: #eee;
-  --font-color: #333;
-  --ghost-font-color: #666;
-  --main-shadow: 6px 6px 15px #bebebe, -6px -6px 15px #ffffff;
-  --inset-shadow: inset 6px 6px 15px #bebebe, inset -6px -6px 15px #ffffff;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --main-color: #333;
-    --font-color: #eee;
-    --ghost-font-color: #aaa;
-    --main-shadow: 6px 6px 15px #303030, -6px -6px 15px #404040;
-    --inset-shadow: inset 6px 6px 15px #303030, inset -6px -6px 15px #404040;
-  }
+  --main-color: #101010;
+  --font-color: #eee;
+  --ghost-font-color: #aaa;
+  --main-shadow: 6px 6px 15px #000, -6px -6px 15px #040404;
+  --inset-shadow: inset 6px 6px 15px #030303, inset -6px -6px 15px #040404;
 }
 
 body {
@@ -33,16 +23,22 @@ a.card {
   font-weight: bold;
   font-size: 1.4rem;
   padding: 1.5rem;
-	border: none;
   font-family: inherit;
 	outline: inherit;
   height: auto;
 }
 
+body.theme0 a.card {
+	border: none;
+}
+
+body.theme1 a.card {
+	border: solid 2px var(--font-color);
+}
+
 .card {
   border-radius: 10px;
   background: var(--main-color);
-  box-shadow: var(--main-shadow);
   color: var(--font-color);
   display: inline-flex;
   width: 17rem;
@@ -53,6 +49,14 @@ a.card {
   height: 11rem;
 }
 
+body.theme0 .card {
+  box-shadow: var(--main-shadow);
+}
+
+body.theme1 .card {
+  border: solid 2px var(--font-color);
+}
+
 .card:focus {
   scale: 1.1;
 }
@@ -61,7 +65,7 @@ a.card {
   scale: 1.1;
 }
 
-.card:active {
+body.theme0 .card:active {
   box-shadow: var(--inset-shadow);
 }
 
@@ -126,4 +130,46 @@ h1.title > img {
   width: 100%;
   padding: 0.3rem;
   animation: rgb 5s infinite alternate;
+}
+
+.theme-picker {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  width: auto;
+  height: 3rem;
+  border-radius: 15px;
+  background-color: #ffffff33;
+}
+
+.theme-picker > div {
+  display: inline-block;
+  position: relative;
+  height: 80%;
+  top: 10%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  scale: 0.5;
+  transition: scale 250ms;
+}
+
+.theme-picker > div:hover {
+  scale: 0.6;
+  cursor: pointer;
+}
+
+.theme-picker > div:active {
+  scale: 0.7;
+}
+
+.theme-picker > div:nth-child(1) {
+  background: var(--main-color);
+  box-shadow: var(--main-shadow);
+}
+
+.theme-picker > div:nth-child(2) {
+  background: var(--main-color);
+  border: solid 2px var(--font-color);
 }
